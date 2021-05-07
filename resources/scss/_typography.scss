@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Lora', serif;
+    src: url('../../public/fonts/Lora/static/Lora-Bold.ttf');
+    src: url('../../public/fonts/Lora/static/Lora-Italic.ttf');
+    src: url('../../public/fonts/Lora/static/Lora-Medium.ttf');
+    src: url('../../public/fonts/Lora/static/Lora-Regular.ttf');
+    src: url('../../public/fonts/Lora/static/Lora-SemiBold.ttf');
+}
+
+// Font*Family: Raleway
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../../public/fonts/Montserrat/Montserrat-Italic.ttf');
+    src: url('../../public/fonts/Montserrat/Montserrat-Medium.ttf');
+    src: url('../../public/fonts/Montserrat/Montserrat-Regular.ttf');
+    src: url('../../public/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+// Font*Family: Yesteryear
+
+
+/* root styling */
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p,span {
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: var(--font-primary);
+}
+
+a{
+    font-family: var(--font-secondary);
+    font-weight:500;
+}

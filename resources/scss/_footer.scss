@@ -1,0 +1,86 @@
+#footer{
+    padding-top: 4em;
+}
+
+#footer .feature-post .flex-item{
+    margin-bottom: 10px;
+}
+
+#footer .tags a{
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+#footer .copyrights{
+    padding: 10px 0;
+    border-top: 2px solid var(--light);
+}
+
+//new css footer
+footer {
+    width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+#footer-logo {
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+#footer-menu {
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#footer-menu a {
+    text-align: center;
+    font-family: HK Grotesk, sans-serif;
+    color: #15454f;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.4;
+    letter-spacing: 0.5px;
+}
+#scroll-up {
+    width: 100%;
+    margin: 80px 0 40px;
+    position: relative;
+}
+#scroll-up:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+#scroll-up span {
+    width: 46px;
+    height: 46px;
+    background: #7495e8;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+    border-radius: 50%;
+    display: block;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+#scroll-up span:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
+}
+#credit {
+    margin-bottom: 40px;
+    color: rgba(116, 149, 232, 0.7);
+    font-size: 16px;
+    font-family: HK Grotesk, sans-serif;
+}

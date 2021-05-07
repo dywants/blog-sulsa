@@ -1,0 +1,51 @@
+#sidebar {
+    width: auto;
+    height: 588px;
+    background: rgba(202, 206, 217, 0.1);
+    padding: 20px;
+}
+#sidebar hr {
+    height: 2px;
+    background: #eaeaea;
+    border: none;
+    margin-bottom: 20px;
+}
+#sidebar h4 {
+    color: #15454f;
+    font-family: HK Grotesk, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+#sidebar h4,
+#top-articles,
+.sidebar-article {
+    margin-bottom: 20px;
+}
+.sidebar-article {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-column-gap: 20px;
+}
+.sidebar-article .sidebar-thumb {
+    width: 60px;
+    height: 60px;
+    background: #e8e8e8;
+}
+.sidebar-article h5 {
+    color: #15454f;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+.sidebar-article .date,
+.sidebar-article h5 {
+    font-family: HK Grotesk, sans-serif;
+    letter-spacing: 0.5px;
+}
+.sidebar-article .date {
+    color: rgba(21, 69, 79, 0.3);
+    font-weight: medium;
+    font-size: 12px;
+}

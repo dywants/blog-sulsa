@@ -1,0 +1,41 @@
+#subscribe input {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px -6px rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+}
+#subscribe input::placeholder {
+    color: rgba(21, 69, 79, 0.3);
+    font-family: HK Grotesk, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+#subscribe input:focus {
+    outline: none;
+}
+#subscribe button {
+    width: 115px;
+    height: 42px;
+    background: #7495e8;
+    line-height: 42px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: HK Grotesk, sans-serif;
+    transition: 0.4s ease-in-out;
+}
+#subscribe button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
+}
+#subscribe button:focus {
+    outline: none;
+}

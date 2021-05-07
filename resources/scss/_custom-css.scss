@@ -1,0 +1,124 @@
+nav {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 105px 5fr 105px;
+    align-items: center;
+}
+#logo {
+    cursor: pointer;
+}
+#menu {
+    display: flex;
+    justify-content: center;
+}
+#menu li {
+    display: inline;
+    padding: 0 10px;
+    position: relative;
+}
+#menu li:after {
+    content: "";
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    background: #e3e1e1;
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    transform: translate();
+}
+#menu li:last-child:after {
+    display: none;
+}
+#menu li a {
+    font-family: HK Grotesk, sans-serif;
+    color: #15454f;
+    font-weight: 600;
+    position: relative;
+}
+#menu li a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #15454f;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: translate();
+    transition: 0.4s ease-in-out;
+}
+#menu li a:hover:after {
+    width: 100%;
+}
+
+#end {
+    grid-column: 1/3;
+    margin: 70px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#end:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+#end p {
+    color: #d4d4d4;
+    z-index: 10;
+    font-family: HK Grotesk, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.5px;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+#cta {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(95.46deg, #98b3f5 -0.14%, #476dcc 99.6%);
+    display: flex;
+    justify-content: center;
+}
+#cta,
+#cta #center {
+    align-items: center;
+}
+#cta #center {
+    width: 1180px;
+    display: grid;
+    grid-template-columns: 1fr 167px;
+}
+#cta p {
+    font-size: 24px;
+    line-height: 32px;
+    padding-right: 30px;
+}
+#cta a,
+#cta p {
+    color: #fff;
+    font-family: HK Grotesk, sans-serif;
+    letter-spacing: 0.5px;
+}
+#cta a {
+    border: 2px solid #fff;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    font-weight: 400;
+    transition: 0.4s ease-in-out;
+}
+#cta a:hover {
+    background: #fff;
+    color: #7495e8;
+}

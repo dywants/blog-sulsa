@@ -19,20 +19,7 @@
         <section id="content">
             <div id="articles">
                 @foreach($postsResult as $post)
-                    <div class="article text-right">
-                        <img src="{{ asset('/storage/' . $post->image) }}" alt="" class="thumb">
-                     <div class="px-2 shadow py-3">
-                         <div class="card-body text-left">
-                             <span class="category text-left mt-2">{{ $post->category->name }}</span>
-                             <h2>{{ $post->title }}</h2>
-                             <span class="meta__donnees">Publié le {{ $post->created_at->format('d/m/Y') }}</span>
-                             <p>{{ $post->excerpt }}</p>
-                         </div>
-                         <div class="card-footer mb-3">
-                             <a href="{{ route('posts.display', $post->slug) }}">Voir Plus</a>
-                         </div>
-                     </div>
-                     </div>
+                    @include('includes.card')
                 @endforeach
                 <div id="end">
                     <p>You've reached the end of the list.</p>

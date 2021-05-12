@@ -2,6 +2,11 @@
 
 @section('content')
     <section class="post">
-       <h1>All post</h1>
+        <div id="articles">
+            @foreach($posts as $post)
+                @include('includes.card')
+            @endforeach
+        </div>
+        {{ $posts->links() }}
     </section>
 @endsection

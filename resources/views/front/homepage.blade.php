@@ -13,21 +13,20 @@
                     </div>
                     <div id="hero-cta"><a href="{{ route('posts.display', $postFirst->slug) }}">Lire l'article</a></div>
                 </div>
-                <div id="hero-image"><img src="{{ asset('storage/' . $postFirst->image) }}" alt="image {{ $postFirst->title }}"></div>
+                <div id="hero-image" style="width: 840px; height: 557px;">
+                    <img src="{{ asset('storage/' . $postFirst->image) }}" alt="image {{ $postFirst->title }}">
+                </div>
             </section>
         </header>
         <section id="content">
-            <div id="articles">
+            <div id="articles" class="pb-4">
                 @foreach($postsResult as $post)
                     @include('includes.card')
                 @endforeach
-                <div id="end">
-                    <p>You've reached the end of the list.</p>
-                </div>
             </div>
-            <div id="sidebar">
+            <aside id="sidebar" class="@if(\Illuminate\Support\Facades\Route::currentRouteName() === "homepage")bg-secondary-600 @endif">
                 <div id="top-articles">
-                    <h4>TOP ARTICLES</h4>
+                    <h4>TOP RECETTES</h4>
                     <hr>
                     <div class="sidebar-article">
                         <div class="sidebar-thumb"></div>
@@ -56,10 +55,13 @@
                 </div>
                 <div id="subscribe">
                     <hr>
-                    <h4>GET WEEKLY UPDATES</h4>
-                    <form><input type="text" placeholder="Enter your email..."><button type="submit">SUBSCRIBE</button></form>
+                    <h4 class="text-white">NEWSLETTER</h4>
+                    <form>
+                        <input type="text" placeholder="Entrez votre email...">
+                        <button type="submit">S'inscrire</button>
+                    </form>
                 </div>
-            </div>
+            </aside>
         </section>
     </div>
 @endsection

@@ -7,6 +7,5 @@
                 @include('includes.card')
             @endforeach
         </div>
-        {{ $posts->links() }}
     </section>
 @endsection

@@ -17,7 +17,6 @@ a{
     width: 1180px;
     height: auto;
     margin: 0 auto;
-    padding-bottom: 40px;
 }
 
 .text-light{
@@ -43,7 +42,7 @@ a{
 .container{
     max-width: 1200px;
     padding: 0 15px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .img-fluid{
@@ -52,8 +51,8 @@ a{
 }
 
 .text-title{
-    font-family: 'DM Sans', sans-serif;
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 .secondary-title{

@@ -33,29 +33,29 @@
 <!-- .Main Site -->
 
 <!-- footer -->
-<div class="wrapper">
-    <footer>
-        <div id="footer-logo"><img src="https://res.cloudinary.com/prvnbist/image/upload/v1519887546/blog-logo.svg" alt="Logo"></div>
-        <div class="tags social">
-            <div class="d-flex flex-wrap">
-                <a href="#" class="nav-link btn bg-light"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="nav-link btn bg-light"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="nav-link btn bg-light"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="nav-link btn bg-light"><i class="fab fa-dribbble"></i></a>
-            </div>
+
+<footer style="background: #f6f6f6 url({{ asset('img/footer_top_bg.jpg') }}) repeat-x top center;">
+    <div id="footer-logo"><img src="https://res.cloudinary.com/prvnbist/image/upload/v1519887546/blog-logo.svg"
+                               alt="Logo"></div>
+    <div class="tags social">
+        <div class="d-flex flex-wrap">
+            <a href="#" class="nav-link btn rounded-full bg-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="nav-link btn rounded-full bg-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="nav-link btn rounded-full bg-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="nav-link btn rounded-full bg-white"><i class="fab fa-dribbble"></i></a>
         </div>
-        <div id="footer-menu">
-            <a href="#">TECH</a>
-            <a href="#">SCIENCE</a>
-            <a href="#">REVIEW</a>
-            <a href="#">CULTURE</a>
-        </div>
-        <div id="scroll-up"><span><i class="fa fa-chevron-up"></i></span></div>
-        <div id="credit">
-            © 2021 <a href="#"  class="text-primary">dywants</a> - Personal Blog Theme. All rights reserved.
-        </div>
-    </footer>
-</div>
+    </div>
+    <div id="footer-menu">
+        @foreach($categories as $category)
+            <a href="#">{{ $category->name }}</a>
+        @endforeach
+    </div>
+    <div id="scroll-up"><span><i class="fa fa-chevron-up"></i></span></div>
+    <div id="credit">
+        © 2021 - crée par:<a href="https://dywants.com" class="text-primary">dywants</a> - All rights reserved.
+    </div>
+</footer>
+
 <!-- .footer -->
 
 <!-- custom javascript main.js file -->

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomepageController::class, 'index'])->name('homepage');
-Route::name('category')->get('categories/{slug}', [FrontPostController::class, 'queryCategory']);
+Route::name('category')->get('categories/{category:slug}', [FrontPostController::class, 'indexCategory']);
 Route::prefix('articles')->group(function (){
     Route::name('posts.all')->get('/', [FrontPostController::class, 'index']);
     Route::name('posts.display')->get('{slug}', [FrontPostController::class, 'show']);

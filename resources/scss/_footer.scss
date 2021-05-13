@@ -31,29 +31,29 @@ footer {
     cursor: pointer;
 }
 #footer-menu {
-    width: 450px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 #footer-menu a {
     text-align: center;
-    font-family: HK Grotesk, sans-serif;
     color: #15454f;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     opacity: 0.4;
     letter-spacing: 0.5px;
 }
 #scroll-up {
     width: 100%;
-    margin: 80px 0 40px;
+    //margin: 80px 0 40px;
     position: relative;
 }
 #scroll-up:after {
     content: "";
     width: 100%;
-    height: 2px;
-    background: #f2f2f2;
+    height: 1px;
+    background: var(--secondary);
     position: absolute;
     top: 50%;
     left: 0;
@@ -62,7 +62,7 @@ footer {
 #scroll-up span {
     width: 46px;
     height: 46px;
-    background: #7495e8;
+    background: #8bb355;
     margin: 0 auto;
     z-index: 10;
     position: relative;
@@ -80,7 +80,6 @@ footer {
 }
 #credit {
     margin-bottom: 40px;
-    color: rgba(116, 149, 232, 0.7);
+    color: var(--dark);
     font-size: 16px;
-    font-family: HK Grotesk, sans-serif;
 }

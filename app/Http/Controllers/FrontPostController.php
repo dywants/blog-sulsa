@@ -57,4 +57,12 @@ class FrontPostController extends Controller
                 $q->where('category.slug', $category_slug);
             })->paginate(8);
     }
+
+    public function indexCategory($category)
+    {
+        $category = Category::whereSlug($category)->with('posts')->firstOrFail();
+        $posts = $category->posts;
+
+        return view('front.posts.show-by-category', compact('category', 'posts'));
+    }
 }

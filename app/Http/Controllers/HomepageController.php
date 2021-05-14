@@ -10,6 +10,8 @@ class HomepageController extends Controller
     public function index(){
         $posts = Post::published()->orderBy('id', 'desc')->get();
 
+        $postsFeatured = Post::published()->where('featured', '=', 1)->orderBy('id', 'desc')->get();
+
         $postFirst = $posts->first();
         $query =  $posts->slice(1);
         $postsResult = $query->take(8);
@@ -17,7 +19,8 @@ class HomepageController extends Controller
         return view('front.homepage', [
             'posts' => $posts,
             'postFirst' => $postFirst,
-            'postsResult' => $postsResult
+            'postsResult' => $postsResult,
+            'postsFeatured' => $postsFeatured
         ]);
     }
 }

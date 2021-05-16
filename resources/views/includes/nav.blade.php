@@ -7,8 +7,11 @@
 <div class="back-menu">
     <div class="back-menu-center">
 
-            <a  href="/">
-                <img src="{{ asset('img/logo-site.png') }}" alt="Logo site">
+            <a href="/" class="logo">
+                <div class="logo-link">
+                    <img src="{{ asset('img/favicon.png') }}" alt="Logo site">
+                </div>
+                <span class="logo-link ml-1">la cuisine de sulson</span>
             </a>
 
         <div style="width:78%;position: relative;">

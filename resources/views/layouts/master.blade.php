@@ -32,7 +32,9 @@
 
 <!-- footer -->
 <footer style="background: #f6f6f6 url({{ asset('img/footer_top_bg.jpg') }}) repeat-x top center;">
-    <a href="/" id="footer-logo"><img src="{{ asset('/img/favicon.svg') }}" class="h-16 w-16" alt="Logo"></a>
+    <a href="/" id="footer-logo">
+        <img src="{{ asset('/img/favicon.png') }}" class="h-16 w-16" alt="Logo">
+    </a>
     <div class="tags social">
         <div class="d-flex flex-wrap">
             <a href="#" class="nav-link btn rounded-full bg-white"><i class="fab fa-facebook-f"></i></a>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "472fceee1743b4e20f9c07d953eef452",
+    "content-hash": "29d3f2c07887ee79e1abeb471c4e3f36",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -2945,6 +2945,76 @@
             "time": "2021-04-10T16:23:39+00:00"
         },
         {
+            "name": "qirolab/laravel-reactions",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qirolab/laravel-reactions.git",
+                "reference": "e1342b343a0df42b0e53b54f8a94de2a9efbbef2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qirolab/laravel-reactions/zipball/e1342b343a0df42b0e53b54f8a94de2a9efbbef2",
+                "reference": "e1342b343a0df42b0e53b54f8a94de2a9efbbef2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.5|~5.6|~5.7|~5.8|^6.0|^7.0|^8.0",
+                "illuminate/support": "~5.5|~5.6|~5.7|~5.8|^6.0|^7.0|^8.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.10",
+                "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0|~3.8.0|^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^7.5|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Qirolab\\Laravel\\Reactions\\ReactionsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Qirolab\\Laravel\\Reactions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Harish Kumar",
+                    "email": "harish.pra22@gmail.com"
+                }
+            ],
+            "description": "Implement reactions (like, dislike, love, emotion etc) on Laravel Eloquent models.",
+            "keywords": [
+                "Rate",
+                "Rating",
+                "Unlike",
+                "dislike",
+                "eloquent",
+                "emotion",
+                "favorite",
+                "favourite",
+                "kudos",
+                "laravel",
+                "like",
+                "love",
+                "reaction",
+                "star"
+            ],
+            "support": {
+                "issues": "https://github.com/qirolab/laravel-reactions/issues",
+                "source": "https://github.com/qirolab/laravel-reactions/tree/2.5.0"
+            },
+            "time": "2020-09-09T12:09:02+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -5769,95 +5839,6 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
-            "name": "infyomlabs/laravel-generator-helpers",
-            "version": "v3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/InfyOmLabs/laravel-generator-helpers.git",
-                "reference": "3312c415abf79ae5eac2002b3e32072533049fcc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator-helpers/zipball/3312c415abf79ae5eac2002b3e32072533049fcc",
-                "reference": "3312c415abf79ae5eac2002b3e32072533049fcc",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^8.0",
-                "php": "^7.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "InfyOm\\GeneratorHelpers\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mitul Golakiya",
-                    "email": "me@mitul.me"
-                }
-            ],
-            "description": "Helper functions for laravel generator packages",
-            "time": "2020-09-13T04:41:04+00:00"
-        },
-        {
-            "name": "infyomlabs/laravel-ui-stisla",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/InfyOmLabs/laravel-ui-stisla.git",
-                "reference": "6a6f4c5bad07ff16d44d2f43417fcdd53b4ca4d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-ui-stisla/zipball/6a6f4c5bad07ff16d44d2f43417fcdd53b4ca4d9",
-                "reference": "6a6f4c5bad07ff16d44d2f43417fcdd53b4ca4d9",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^8.0",
-                "infyomlabs/laravel-generator-helpers": "^3.0",
-                "laravel/ui": "^3.0",
-                "php": "^7.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "InfyOm\\StislaPreset\\StislaPresetServiceProvider",
-                        "InfyOm\\StislaPreset\\FortifyStislaPresetServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "InfyOm\\StislaPreset\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mitul Golakiya",
-                    "email": "me@mitul.me"
-                }
-            ],
-            "description": "Laravel frontend preset for Stisla Theme",
-            "keywords": [
-                "laravel",
-                "preset",
-                "stisla"
-            ],
-            "time": "2020-12-21T14:01:09+00:00"
-        },
-        {
             "name": "laravel/sail",
             "version": "v1.5.0",
             "source": {
@@ -7621,5 +7602,6 @@
     "platform": {
         "php": "^7.3|^8.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="login-brand">
-                        <a href="/" ><img src="{{ asset('img/favicon.svg') }}" alt="logo" width="100px" class="cursor-pointer"></a>
+                        <a href="/" ><img src="{{ asset('img/favicon.png') }}" alt="logo" width="100px" class="cursor-pointer"></a>
                     </div>
                     @yield('content')
                     <div class="simple-footer">

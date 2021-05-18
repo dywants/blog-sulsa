@@ -5,6 +5,13 @@
 //     collapse.forEach(col => col.classList.toggle("collapse-toggle"));
 // })
 
+/**
+ * We will create a fresh Vue application instance.
+ */
+// import { createApp } from "vue";
+//
+// const app = createApp({});
+
 // Sticky Navigation
 window.onscroll = function(){ myFunction()};
 // get the current value
@@ -22,3 +29,11 @@ function myFunction(){
     }
 }
 // require('./bootstrap');
+
+// app.component(
+//     "reactions-component",
+//     require("./components/ReactionsComponent.vue").default
+// );
+//
+// app.mount("#app");
+

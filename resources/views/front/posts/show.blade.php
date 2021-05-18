@@ -1,5 +1,37 @@
 @extends('layouts.post-layout')
 
+    <style>
+        .title-separated:before{
+            content: "";
+            height: 1px;
+            border-bottom: 1px solid var(--secondary);
+            text-rendering: optimizeLegibility;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 0;
+        }
+
+        .title-separated > span:nth-child(1){
+            color: #9f9f9f;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .title-separated > span{
+            display: inline-block;
+            background-color: #fff;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            z-index: 1;
+        }
+    </style>
+
+
 @section('content')
     <section class="post container pb-4 bg-white">
         <div class="mb-4 md:mb-0 w-full mx-auto relative shadow-md">
@@ -33,6 +65,15 @@
 
             <div class="px-4 text-lg leading-relaxed w-full my-4">
                 {!! $post->body !!}
+            </div>
+
+            <div class="reaction">
+                <reactions-component
+                    :summary='@json($post->reactionSummary())'
+                    @auth
+                    :reacted='@json($post->reacted())'
+                    @endauth
+                />
             </div>
 
             <div class="w-full mx-auto">
@@ -100,4 +141,23 @@
             <div class="add border rounded-r-2xl rounded-l-sm border-gray-300 p-1 px-4 cursor-pointer hover:bg-gray-700 hover:text-white">Bio</div>
         </div>
     </div>
+@endsection
+
+@section('other-section')
+    <section class="related__post mt-8 py-4">
+        <div class="col-12 w-full">
+            <h2 class="title-separated flex items-center flex-col justify-center relative text-center text-primary-600 text-2xl mx-0 my-12">
+                <span>Mes autres</span>
+                <span>Recettes</span>
+            </h2>
+        </div>
+        <div class="grid grid-cols-6 gap-3">
+            @foreach($postsRelated as $post)
+                <div class="card-related__post col-span-6 md:col-span-2">
+                    @include('includes.card')
+                </div>
+            @endforeach
+        </div>
+    </section>
+
 @endsection

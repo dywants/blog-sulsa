@@ -2,8 +2,7 @@
 
 @section('main')
     <div class="wrapper">
-{{--        <header>--}}
-            <section id="hero" class="my-3">
+            <section id="hero" class="my-3 mt-8">
                 <div id="hero-desc">
                     <div id="hero-date"><span>{{ $postFirst->created_at->format('d/m/Y') }}</span></div>
                     <div id="hero-title">
@@ -11,13 +10,12 @@
                             <h2>{{ $postFirst->title }}</h2>
                         </a>
                     </div>
-                    <div id="hero-cta"><a href="{{ route('posts.display', $postFirst->slug) }}">Lire l'article</a></div>
+                    <p id="hero-cta"><a href="{{ route('posts.display', $postFirst->slug) }}">Lire l'article</a></p>
                 </div>
                 <div id="hero-image" style="width: 840px; height: 557px;">
                     <img src="{{ asset('storage/' . $postFirst->image) }}" alt="image {{ $postFirst->title }}">
                 </div>
             </section>
-{{--        </header>--}}
         <section id="content">
             <div id="articles" class="pb-4">
                 @foreach($postsResult as $post)

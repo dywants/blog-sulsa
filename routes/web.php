@@ -10,6 +10,8 @@ Route::name('category')->get('categories/{category:slug}', [FrontPostController:
 Route::prefix('articles')->group(function (){
     Route::name('posts.all')->get('/', [FrontPostController::class, 'index']);
     Route::name('posts.display')->get('{slug}', [FrontPostController::class, 'show']);
+    Route::post('/{post}/reaction', [FrontPostController::class, 'toggle'])
+        ->middleware('auth');
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

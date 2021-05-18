@@ -13,6 +13,13 @@
 // toggle.addEventListener('click' , function(){
 //     collapse.forEach(col => col.classList.toggle("collapse-toggle"));
 // })
+
+/**
+ * We will create a fresh Vue application instance.
+ */
+// import { createApp } from "vue";
+//
+// const app = createApp({});
 // Sticky Navigation
 window.onscroll = function () {
   myFunction();
@@ -30,6 +37,12 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 } // require('./bootstrap');
+// app.component(
+//     "reactions-component",
+//     require("./components/ReactionsComponent.vue").default
+// );
+//
+// app.mount("#app");
 
 /***/ }),
 

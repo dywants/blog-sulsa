@@ -20,5 +20,8 @@
                 @yield('aside')
             </div>
         </section>
+        <div class="other-section">
+            @yield('other-section')
+        </div>
     </div>
 @endsection

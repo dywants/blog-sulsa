@@ -23,11 +23,13 @@
 <!-- .Header -->
 
 <!-- Main Site -->
-<main id="site-main">
+<div id="app">
+    <main id="site-main">
 
-  @yield('main')
+        @yield('main')
 
-</main>
+    </main>
+</div>
 <!-- .Main Site -->
 
 <!-- footer -->

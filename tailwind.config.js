@@ -1,3 +1,6 @@
+// tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   purge: [
       './storage/framework/views/*.php',
@@ -41,5 +44,17 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+      require('tailwindcss-pseudo-elements'),
+      plugin(({addUtilities}) => {
+          const newUtilities = {
+              ".empty-content": {
+                  content: "''",
+              },
+          }
+          addUtilities(newUtilities, {
+              variants: ["before", "after"],
+          });
+      })
+  ],
 }

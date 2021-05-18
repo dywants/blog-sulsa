@@ -15,12 +15,21 @@ class FrontPostController extends Controller
 
     public function show($slug){
         $post = Post::with('category')->whereSlug($slug)->firstOrFail();
+
+       $postsRelated =  Post::inRandomOrder()->where('category_id', '=', $post->category->id)
+           ->where('id', '!=', $post->id)
+           ->take(3)
+           ->get();
+
         // Previous post
         $post->previous = $this->getPreviousPost($post->id);
         // Next post
         $post->next = $this->getNextPost($post->id);
 
-        return view('front.posts.show',['post' => $post]);
+        return view('front.posts.show',[
+            'post' => $post,
+            'postsRelated' => $postsRelated
+        ]);
     }
 
     public function category(){
@@ -64,5 +73,10 @@ class FrontPostController extends Controller
         $posts = $category->posts;
 
         return view('front.posts.show-by-category', compact('category', 'posts'));
+    }
+
+    public function toggle(Post $post, Request $request)
+    {
+        $post->toggleReaction($request->reaction);
     }
 }

@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Qirolab\Laravel\Reactions\Traits\Reacts;
 use TCG\Voyager\Models\Post;
 
 class User extends \TCG\Voyager\Models\User
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable,Reacts;
 
     /**
      * The attributes that are mass assignable.

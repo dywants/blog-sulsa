@@ -1,37 +1,5 @@
 @extends('layouts.post-layout')
 
-    <style>
-        .title-separated:before{
-            content: "";
-            height: 1px;
-            border-bottom: 1px solid var(--secondary);
-            text-rendering: optimizeLegibility;
-            width: 100%;
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            z-index: 0;
-        }
-
-        .title-separated > span:nth-child(1){
-            color: #9f9f9f;
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .title-separated > span{
-            display: inline-block;
-            background-color: #fff;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            z-index: 1;
-        }
-    </style>
-
-
 @section('content')
     <section class="post container pb-4 bg-white">
         <div class="mb-4 md:mb-0 w-full mx-auto relative shadow-md">
@@ -132,7 +100,6 @@
             <img class="w-28 h-28 p-1 bg-white rounded-full" src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb" alt=""/>
             <div class="title mt-11 ml-3 font-bold flex flex-col">
                 <div class="name break-words">Sarah</div>
-                <!--  add [dark] class for bright background -->
                 <div class="add font-semibold text-sm italic dark text-dark-600">Model</div>
             </div>
         </div>

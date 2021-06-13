@@ -1,121 +1,116 @@
-<style>
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
+<div>
+    <nav class="shadow-sm">
 
-    @media screen and (max-width:953px) {
-        .menu{
-            display: none;
-        }
-    }
-
-
-    .menu.active{
-        display: block;
-        -webkit-animation-name: zoomIn;
-        animation-name: zoomIn;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-    }
-</style>
-
-<div class="back-menu">
-    <nav class="w-full mx-auto h-full py-10 relative md:mx-8">
-        <label for="toggle -mt-4" class="-mt-4 toggle md:hidden">
-            <i class="fas fa-bars toggle-icon"></i>
-        </label>
         <a href="/" class="overflow-hidden flex items-center -mt-4 logo md:w-full">
-            <div class="w-10 h-10 md:w-16 md:h-16">
+            <div class="w-10 h-10">
                 <img src="{{ asset('img/favicon.png') }}" alt="Logo site" class="w-full">
             </div>
-            <span class="text-3xl leading-7 ml-1 w-24">la cuisine de sulson</span>
+            <span class="text-lg leading-7 ml-1 width">la cuisine de sulson</span>
         </a>
 
-        {{--        <div style="width:78%;position: relative;">--}}
-        <div class="w-full sm:top-20 sm:absolute bg-white sm:shadow md:flex md:items-center p-4 text-center menu">
-            <ul class="md:flex md:items-center">
-                <li class="item py-0.5"><a href="#">Home</a></li>
-                <li class="item py-0.5"><a href="#">About</a></li>
-                <li class="item py-0.5 has-submenu">
-                    <a tabindex="0" class="inline-flex py-0.5 items-center">Services
-                        <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                        </svg>
-                    </a>
-                    <ul class="submenu bg-dark-600 py-1 hidden">
-                        <li class="subitem py-0.5"><a href="#">Design</a></li>
-                        <li class="subitem py-0.5"><a href="#">Development</a></li>
-                        <li class="subitem py-0.5"><a href="#">SEO</a></li>
-                        <li class="subitem py-0.5"><a href="#">Copywriting</a></li>
-                    </ul>
-                </li>
-                <li class="item has-submenu">
-                    <a tabindex="0" class="inline-flex py-0.5 items-center">Plans
-                        <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                        </svg>
-                    </a>
-                    <ul class="submenu bg-dark-600 py-1 hidden">
-                        <li class="subitem py-0.5"><a href="#">Freelancer</a></li>
-                        <li class="subitem py-0.5"><a href="#">Startup</a></li>
-                        <li class="subitem py-0.5"><a href="#">Enterprise</a></li>
-                    </ul>
-                </li>
-                <li class="item"><a href="#">Blog</a></li>
-                <li class="item"><a href="#">Contact</a>
-                </li>
+        <ul class="nav-links">
+            <li><a href="/">Accueil</a></li>
+            <li>
+                <a href="" class="inline-flex items-center">Php
+                    <svg class="fill-current h-4 w-4 ml-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                </a>
+                <ul class="sub-nav-links">
+                    <li><a href="">laravel</a></li>
+                    <li><a href="">django</a></li>
+                    <li><a href="">symphony</a></li>
+                    <li><a href="">cakephp</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="inline-flex items-center">Javascript
+                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                </a>
+                <ul class="sub-nav-links">
+                    <li><a href="">poulet</a></li>
+                    <li><a href="">riz</a></li>
+                    <li><a href="">tomate</a></li>
+                    <li><a href="">php</a></li>
+                    <li><a href="">nodejs</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="inline-flex items-center">Python
+                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                </a>
+                <ul class="sub-nav-links">
+                    <li><a href="">panda</a></li>
+                    <li><a href="">data-center</a></li>
+                    <li><a href="">wordpress</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="inline-flex items-center">Designs
+                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                </a>
+                <ul class="sub-nav-links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Work</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="inline-flex items-center">wordpress
+                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
+                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                </a>
+                <ul class="sub-nav-links">
+                    <li><a href="">Themes</a></li>
+                    <li><a href="">Plugin</a></li>
+                    <li><a href="">custom</a></li>
+                    <li><a href="">Page Builder</a></li>
+                    <li><a href="">Elementary</a></li>
+                </ul>
+            </li>
+            <li><a href="">Git Hub</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
 
-                {{--  @foreach($categories as $category)
-                     @if($category->children)
-                         <li class="dropdown outline-none focus:outline-none">
-                             <a class="item dropbtn outline-none focus:outline-none mr-2"
-                                     tabindex="0">
-                                 {{ $category->name }}
-                                 <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
-                                      viewBox="0 0 20 20">
-                                     <path
-                                         d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                                 </svg>
-                             </a>
-                             <ul class="dropdown-content origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                 @foreach($category->children as $child)
-                                     <li class="subitem"><a href="#home">{{ $child->name }}</a></li>
-                                 @endforeach
-                             </ul>
-                         </li>
-                     @else
-                         <li class="menu-item-1"><a href="#">{{ $category->name }}</a></li>
-                     @endif
-                 @endforeach --}}
-            </ul>
+        <div class="burger cursor-pointer z-40">
+            <div class="line1 line"></div>
+            <div class="line2 line"></div>
+            <div class="line3 line"></div>
         </div>
         @guest
-            <div class="menu-register">
-                <a class="register" href="{{ route('register') }}">S'inscrire</a>
-                <span style="font-weight: 900;">|</span>
-                <a class="register" href="{{ route('login') }}">Connexion</a>
+            <div class="menu-register flex items-center">
+                <a class="register hidden md:inline-flex" href="{{ route('register') }}">S'inscrire</a>
+                <span class="hidden md:block" style="font-weight: 900;">|</span>
+                <a class="register hidden md:inline-flex" href="{{ route('login') }}">Connexion</a>
+                <a href="#" class="md:hidden mr-10">Connexion</a>
             </div>
         @else
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center absolute top-7 m-1.5 right-8">
                 <!-- Dropdown profile -->
-                <div x-data="{ open: false }" class="relative mr-2">
-                {{--                        <button x-on:click="open = true" class="ml-2 block border h-10 w-10 rounded-full overflow-hidden--}}
-                {{--                    focus:outline-none">--}}
-                {{--                            @if(Auth::user()->avatar)--}}
-                {{--                                <img src="{{ asset('storage/users/'. Auth::user()->avatar) }}"--}}
-                {{--                                     class="h-full w-full object-cover">--}}
-                {{--                            @else--}}
-                {{--                                <livewire:image-upload/>--}}
-                {{--                            @endif--}}
-                {{--                        </button>--}}
-                <!-- Dropdown Body -->
-                    <div x-show.transition="open" x-on:click.away="open = false"
-                         class="absolute right-0 w-40 mt-2 py-2 bg-white border rounded shadow-xl z-1600">
+                <div class="relative mr-2">
+                    <button id="btn-profile" class="ml-2 block border h-10 w-10 rounded-full overflow-hidden
+                                    focus:outline-none">
+                        @if(Auth::user()->avatar)
+                            <img src="{{ asset('storage/users/'. Auth::user()->avatar) }}"
+                                 class="h-full w-full object-cover">
+                        @else
+{{--                            <livewire:image-upload/>--}}
+                        @endif
+                    </button>
+                    <!-- Dropdown Body -->
+                    <div id="menu-profile" class="absolute right-0 w-40 mt-2 bg-white border p-1.5 z-50 rounded-md shadow-xl z-1600 hidden">
+                        <a href="#" class="transition-colors duration-200 flex items-center justify-center px-4 py-1.5 rounded-md text-base
+                            text-dark-600 hover:bg-primary-600 hover:text-dark-100">Profile</a>
                         <a href="{{ route('logout') }}"
-                           class="transition-colors duration-200 flex items-center justify-center px-4 py-2 text-lg
-                            text-dark-600 rounded hover:bg-primary-600 hover:text-dark-100"
+                           class="transition-colors duration-200 flex items-center justify-center px-4 py-1.5 rounded-md text-base
+                            text-dark-600 hover:bg-primary-600 hover:text-dark-100"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor" width="24"
@@ -134,116 +129,50 @@
                 <!-- // Dropdown profile -->
             </div>
         @endguest
-        {{--        </div>--}}
     </nav>
-    {{--  <div class="menu flex items-center justify-between">
-        <div class="left flex items-center pt-2 top-4">
-            <div class="toggle-menu">
-                <label for="toggle-btn">
-                    <i class="fas fa-bars toggle-icon"></i>
-                </label>
-                <input id="toggle-btn" type="checkbox">
-                <ul class="toggle-items top-0">
-                    <li class="toggle-item-1"><a href="#">Accueil</a></li>
-                    <li class="toggle-item-20"><a href="#">Blog</a></li>
-                    <li class="item has-submenu">
-                        <a tabindex="0" class="flex items-center">Dinner
-                            <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                            </svg>
-                        </a>
-                        <ul class="submenu">
-                            <li class="subitem"><a href="#">Freelancer</a></li>
-                            <li class="subitem"><a href="#">Startup</a></li>
-                            <li class="subitem"><a href="#">Enterprise</a></li>
-                        </ul>
-                    </li>
-                    <li class="toggle-item-3"><a href="#">About us</a></li>
-                    <li class="toggle-item-4"><a href="#">Contact us</a></li>
-                    <li class="item has-submenu">
-                        <a tabindex="0" class="flex items-center">Dejeuner
-                            <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                            </svg>
-                        </a>
-                        <ul class="submenu">
-                            <li class="subitem"><a href="#">Freelancer</a></li>
-                            <li class="subitem"><a href="#">Startup</a></li>
-                            <li class="subitem"><a href="#">Enterprise</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-              <a href="/" class="logo toggle-menu flex items-center w-full">
-                  <div class="logo-link">
-                      <img src="{{ asset('img/favicon.png') }}" alt="Logo site" class="w-10 h-10">
-                  </div>
-                  <span class="logo-link ml-1 w-36">la cuisine de sulson</span>
-              </a>
-        </div>
-         <div class="toggle-item-5 mr-4 toggle-menu">
-             <a href="{{ route('login') }}" class="p-2 bg-primary-600 text-white rounded-md text-sm">Connexion</a>
-         </div>
-     </div> --}}
 </div>
 
 <script>
-    const toggle = document.querySelector(".toggle");
-    const menu = document.querySelector(".menu");
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
 
-    /* Toggle mobile menu */
-    function toggleMenu() {
-        if (menu.classList.contains("active")) {
-            menu.classList.remove("active");
-            // // adds the menu (hamburger) icon
-            // toggle.innerHTML = "<i class=’fas fa-bars’></i>";
-        } else {
-            menu.classList.add("active");
-            // // adds the close (x) icon
-            // toggle.innerHTML = "<i class=’fas fa-times’></i>";
-        }
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+        });
     }
+    navSlide();
 
-    /* Event Listener */
-    toggle.addEventListener("click", toggleMenu, false);
-    // function myFunction() {
-    //     document.getElementById("myDropdown").classList.toggle("show");
-    // }
-    //
-    // // Close the dropdown if the user clicks outside of it
-    // window.onclick = function(event) {
-    //     if (!event.target.matches('.dropbtn')) {
-    //         var dropdowns = document.getElementsByClassName("dropdown-content");
-    //         var i;
-    //         for (i = 0; i < dropdowns.length; i++) {
-    //             var openDropdown = dropdowns[i];
-    //             if (openDropdown.classList.contains('show')) {
-    //                 openDropdown.classList.remove('show');
-    //             }
-    //         }
-    //     }
-    // }
+    // menu profile
+    const navProfile = () => {
+        const btn = document.getElementById('btn-profile')
+        const menuContent = document.getElementById('menu-profile')
+
+        btn.addEventListener('click', () => {
+            menuContent.classList.toggle('show');
+        })
+    }
+    navProfile();
 
     const items = document.querySelectorAll(".item");
 
     /* Activate Submenu */
- function toggleItem() {
+    function toggleItem() {
         if (this.classList.contains("submenu-active")) {
             this.classList.remove("submenu-active");
             this.style.color = '#333333'
-        }
-        else {
+        } else {
             this.classList.add("submenu-active");
             this.style.color = 'white';
         }
     }
 
     /* Event Listeners */
-   for (let item of items) {
-         if (item.querySelector(".submenu")) {
-             item.addEventListener("click", toggleItem, false);
-             item.addEventListener("keypress", toggleItem, false);
-         }
+    for (let item of items) {
+        if (item.querySelector(".submenu")) {
+            item.addEventListener("click", toggleItem, false);
+            item.addEventListener("keypress", toggleItem, false);
+        }
     }
 
 </script>

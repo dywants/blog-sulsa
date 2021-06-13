@@ -8,11 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
-use Qirolab\Laravel\Reactions\Traits\Reactable;
 
 class Post extends \TCG\Voyager\Models\Post
 {
-    use HasFactory, Reactable;
+    use HasFactory;
 
     public function user(): BelongsTo
     {

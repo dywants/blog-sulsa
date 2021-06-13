@@ -35,15 +35,6 @@
                 {!! $post->body !!}
             </div>
 
-            <div class="reaction">
-                <reactions-component
-                    :summary='@json($post->reactionSummary())'
-                    @auth
-                    :reacted='@json($post->reacted())'
-                    @endauth
-                />
-            </div>
-
             <div class="w-full mx-auto">
                 <div class="sm:grid grid-cols-4 gap-3 mx-auto">
                     @isset($post->previous)

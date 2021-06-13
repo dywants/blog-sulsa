@@ -1,7 +1,9 @@
 @extends('layouts.auth_app')
+
 @section('title')
     Inscription
 @endsection
+
 @section('content')
     <div class="card card-primary">
         <div class="card-header"><h4>Inscription</h4></div>

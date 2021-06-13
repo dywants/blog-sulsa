@@ -8,15 +8,12 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
-        "blade-ui-kit/blade-ui-kit": "^0.2.0",
+        "php": "^7.4|^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5",
-        "qirolab/laravel-reactions": "^2.5",
-        "tcg/voyager": "^1.4"
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

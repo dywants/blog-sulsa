@@ -13,7 +13,7 @@ use TCG\Voyager\Models\Post;
 
 class User extends \TCG\Voyager\Models\User
 {
-    use HasFactory, Notifiable,Reacts;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontPostController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,3 +22,5 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::name('page')->get('{page:slug}', PageController::class);

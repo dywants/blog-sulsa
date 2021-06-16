@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use TCG\Voyager\Models\Category;
 
 class FrontPostController extends Controller
@@ -20,6 +21,13 @@ class FrontPostController extends Controller
            ->where('id', '!=', $post->id)
            ->take(3)
            ->get();
+
+        //        View count post
+        $blogKey = 'blog_' . $post->id;
+        if (!Session::has($blogKey)) {
+            $post->increment('views_count');
+            Session::put($blogKey,1);
+        }
 
         // Previous post
         $post->previous = $this->getPreviousPost($post->id);

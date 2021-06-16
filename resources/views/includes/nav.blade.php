@@ -10,71 +10,26 @@
 
         <ul class="nav-links">
             <li><a href="/">Accueil</a></li>
-            <li>
-                <a href="" class="inline-flex items-center">Php
-                    <svg class="fill-current h-4 w-4 ml-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                    </svg>
-                </a>
-                <ul class="sub-nav-links">
-                    <li><a href="">laravel</a></li>
-                    <li><a href="">django</a></li>
-                    <li><a href="">symphony</a></li>
-                    <li><a href="">cakephp</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </li>
-            <li><a href="" class="inline-flex items-center">Javascript
-                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                    </svg>
-                </a>
-                <ul class="sub-nav-links">
-                    <li><a href="">poulet</a></li>
-                    <li><a href="">riz</a></li>
-                    <li><a href="">tomate</a></li>
-                    <li><a href="">php</a></li>
-                    <li><a href="">nodejs</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="" class="inline-flex items-center">Python
-                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                    </svg>
-                </a>
-                <ul class="sub-nav-links">
-                    <li><a href="">panda</a></li>
-                    <li><a href="">data-center</a></li>
-                    <li><a href="">wordpress</a></li>
-                </ul>
-            </li>
-            <li><a href="" class="inline-flex items-center">Designs
-                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                    </svg>
-                </a>
-                <ul class="sub-nav-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Work</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </li>
-            <li><a href="" class="inline-flex items-center">wordpress
-                    <svg class="fill-current h-4 w-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">--}}
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                    </svg>
-                </a>
-                <ul class="sub-nav-links">
-                    <li><a href="">Themes</a></li>
-                    <li><a href="">Plugin</a></li>
-                    <li><a href="">custom</a></li>
-                    <li><a href="">Page Builder</a></li>
-                    <li><a href="">Elementary</a></li>
-                </ul>
-            </li>
+            @foreach ($categories as $category)
+                <li>
+                    <a href="" class="inline-flex items-center">
+                       {{ $category->name }}
+                        @if (count($category->children))
+                            <svg class="fill-current h-4 w-4 ml-1.5" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                            </svg>
+                        @endif
+                    </a>
+                    @if (count($category->children))
+                        <ul class="sub-nav-links">
+                            @foreach($category->children as $child)
+                                <li><a href="{{ route('category', $child->slug) }}">{{ $child->name }}</a></li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </li>
+            @endforeach
             <li><a href="">Git Hub</a></li>
             <li><a href="">Contact</a></li>
         </ul>
@@ -98,10 +53,11 @@
                     <button id="btn-profile" class="ml-2 block border h-10 w-10 rounded-full overflow-hidden
                                     focus:outline-none">
                         @if(Auth::user()->avatar)
-                            <img src="{{ asset('storage/users/'. Auth::user()->avatar) }}"
+                            <img src="{{ asset('storage/'. Auth::user()->avatar) }}"
                                  class="h-full w-full object-cover">
                         @else
-{{--                            <livewire:image-upload/>--}}
+                            <img src="{{ asset('storage/users/default.png') }}"
+                                 class="h-full w-full object-cover">
                         @endif
                     </button>
                     <!-- Dropdown Body -->

@@ -30,7 +30,8 @@ class AppServiceProvider extends ServiceProvider
             'front.homepage',
             'front.posts.show',
             'front.posts.index',
-            'front.posts.show-by-category'
+            'front.posts.show-by-category',
+            'front.pages'
 
         ], HeaderComposer::class);
     }

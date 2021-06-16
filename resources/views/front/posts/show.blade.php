@@ -6,25 +6,30 @@
             <div class="flex flex-row px-4 py-2">
                 <div class="w-auto h-auto rounded-full border-2 border-primary-600">
                     <img class='w-12 h-12 object-cover rounded-full shadow cursor-pointer' alt='User avatar'
-                         src='https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=200'>
+                         src='{{asset('storage/'. $post->authorId->avatar) }}'>
                 </div>
                 <div class="flex flex-col mb-2 ml-4 mt-1">
-                    <div class='text-gray-600 text-sm font-semibold'>Sara Lauren</div>
+                    <div class='text-gray-600 text-sm font-semibold'>{{ $post->authorId->name }}</div>
                     <div class='flex w-full mt-1'>
-                        <div class='text-blue-700 font-base text-xs mr-1 cursor-pointer'>
-                            UX Design
-                        </div>
                         <div class='text-gray-400 font-thin text-xs'>
-                            • 30 seconds ago
+                            {{ $post->created_at->diffForHumans() }}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="mb-4 px-4">
-                <h1 class="text-4xl font-semibold text-gray-800 leading-tight">{{ $post->title }}</h1>
-                <a href="{{ route('category', $post->category->slug) }}" class="category mb-4">
-                    {{ $post->category->name }}
-                </a>
+                <h1 class="text-4xl font-semibold text-gray-800 leading-tight mb-2">{{ $post->title }}</h1>
+                <div class="flex items-center">
+                    <a href="{{ route('category', $post->category->slug) }}" class="category mb-0" style="margin-bottom:0;">
+                        {{ $post->category->name }}
+                    </a>
+                    <span class="relative inline-block ml-8">
+                        <svg class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                           <path fill="currentColor" d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z"/>
+                       </svg>
+                         <span class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">{{ $post->views_count }}</span>
+                    </span>
+               </div>
             </div>
 
             <img

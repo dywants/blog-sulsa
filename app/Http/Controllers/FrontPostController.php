@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -22,6 +23,9 @@ class FrontPostController extends Controller
            ->take(3)
            ->get();
 
+       //   request about me
+        $about = About::select('fullname','image','function')->findOrFail(1);
+
         //        View count post
         $blogKey = 'blog_' . $post->id;
         if (!Session::has($blogKey)) {
@@ -36,7 +40,8 @@ class FrontPostController extends Controller
 
         return view('front.posts.show',[
             'post' => $post,
-            'postsRelated' => $postsRelated
+            'postsRelated' => $postsRelated,
+            'about' => $about
         ]);
     }
 

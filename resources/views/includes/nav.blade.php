@@ -3,9 +3,17 @@
 
         <a href="/" class="overflow-hidden flex items-center -mt-4 logo md:w-full">
             <div class="w-10 h-10">
-                <img src="{{ asset('img/favicon.png') }}" alt="Logo site" class="w-full">
+                @if(setting('site.logo'))
+                    <img src="{{ setting('site.logo') }}" alt="logo site" class="w-full">
+                @else
+                    <img src="{{ asset('img/favicon.png') }}" alt="Logo site" class="w-full">
+                @endif
             </div>
-            <span class="text-lg leading-7 ml-1 width">la cuisine de sulson</span>
+            @if(setting('site.title'))
+                <span class="text-base leading-7 ml-1 width">{{setting('site.title')}}</span>
+            @else
+                <span class="text-base leading-7 ml-1 width">la cuisine de sulson</span>
+            @endif
         </a>
 
         <ul class="nav-links">
@@ -104,9 +112,12 @@
         const btn = document.getElementById('btn-profile')
         const menuContent = document.getElementById('menu-profile')
 
-        btn.addEventListener('click', () => {
-            menuContent.classList.toggle('show');
-        })
+        if (typeof btn !== 'undefined') {
+            btn.addEventListener('click', () => {
+                menuContent.classList.toggle('show');
+            })
+        }
+
     }
     navProfile();
 

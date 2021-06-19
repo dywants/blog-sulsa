@@ -26,12 +26,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['front.posts.show-by-category',
+        View::composer([
+            'front.posts.show-by-category',
             'front.homepage',
             'front.posts.show',
             'front.posts.index',
             'front.posts.show-by-category',
-            'front.pages'
+            'front.pages',
+            'front.about'
 
         ], HeaderComposer::class);
     }

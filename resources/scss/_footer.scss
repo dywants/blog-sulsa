@@ -56,7 +56,9 @@ footer {
         z-index: 10;
         position: relative;
         border-radius: 50%;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: 44px;
         text-align: center;
         color: #fff;

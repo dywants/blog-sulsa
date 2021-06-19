@@ -17,6 +17,10 @@ Route::prefix('articles')->group(function () {
 });
 //Route::resource('abouts', AboutController::class);
 Route::get('about', [AboutController::class, 'index'])->name('about');
+//Contact form
+Route::get('/contact', [App\Http\Controllers\EmailController::class, 'create'])->name('contact');
+Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();

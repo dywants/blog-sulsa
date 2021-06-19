@@ -1,27 +1,13 @@
-// let toggle = document.querySelector("#header .toggle-button");
-// let collapse = document.querySelectorAll("#header .collapse");
-//
-// toggle.addEventListener('click' , function(){
-//     collapse.forEach(col => col.classList.toggle("collapse-toggle"));
-// })
-
-/**
- * We will create a fresh Vue application instance.
- */
-// import { createApp } from "vue";
-//
-// const app = createApp({});
-
 // Sticky Navigation
-window.onscroll = function(){ myFunction()};
+window.onscroll = function(){ stickyNavBar()};
 // get the current value
 let navbar = document.getElementById("header");
 
 // get the navbar position
 let sticky = navbar.offsetTop;
-
+console.log(sticky)
 // sticky function
-function myFunction(){
+function stickyNavBar(){
     if(window.pageYOffset >= sticky){
         navbar.classList.add("sticky");
     }else{
@@ -30,10 +16,4 @@ function myFunction(){
 }
 // require('./bootstrap');
 
-// app.component(
-//     "reactions-component",
-//     require("./components/ReactionsComponent.vue").default
-// );
-//
-// app.mount("#app");
 

@@ -60,7 +60,7 @@
                         <div class="col-start-1 col-end-3 my-2">
                             <a href="{{ route('posts.display', $post->previous->slug) }}">
                                 <div
-                                    class="h-full p-6 bg-white hover:shadow-lg border-b-4 border-primary-600 shadow-md">
+                                    class="p-6 bg-white hover:shadow-lg border-b-4 border-primary-600 shadow-md">
                                     <h3 class="text-2xl mb-3 font-semibold inline-flex">
                                         <svg class="mr-2" width="24" height="30" viewBox="0 0 24 24"
                                              fill="none"
@@ -81,7 +81,7 @@
                         <div class="col-end-5 col-span-2 my-2">
                             <a href="{{ route('posts.display', $post->next->slug) }}">
                                 <div
-                                    class="h-full p-6 dark:bg-gray-800 bg-white hover:shadow-xl border-b-4 border-primary-600 shadow-md text-right">
+                                    class="p-6 dark:bg-gray-800 bg-white hover:shadow-xl border-b-4 border-primary-600 shadow-md text-right">
                                     <h3 class="text-2xl mb-3 font-semibold inline-flex ">
                                         Next
                                         <svg class="ml-2" width="24" height="30" viewBox="0 0 24 24"
@@ -137,27 +137,29 @@
 @endsection
 
 @section('other-section')
-    <div class="my-8">
-        <div class="fb-comments" data-href="{{ Request::url() }}" data-width="736" data-numposts="5"></div>
-    </div>
-   <div class="mt-8">
-       <div id="disqus_thread"></div>
+   <div class="w-96 md:w-full">
+       <div class="my-8 md:w-8/12">
+           <div class="fb-comments w-full" data-href="{{ Request::url() }}" data-width="736" data-numposts="5"></div>
+       </div>
+       <div class="mt-8 w-1/2">
+           <div id="disqus_thread"></div>
+       </div>
+       <section class="related__post mt-8 py-4">
+           <div class="col-12 w-full">
+               <h2 class="title-separated flex items-center flex-col justify-center relative text-center text-primary-600 text-2xl mx-0 my-12">
+                   <span>Mes autres</span>
+                   <span>Recettes</span>
+               </h2>
+           </div>
+           <div class="grid grid-cols-6 gap-3">
+               @foreach($postsRelated as $post)
+                   <div class="card-related__post col-span-6 md:col-span-2">
+                       @include('includes.card')
+                   </div>
+               @endforeach
+           </div>
+       </section>
    </div>
-    <section class="related__post mt-8 py-4">
-        <div class="col-12 w-full">
-            <h2 class="title-separated flex items-center flex-col justify-center relative text-center text-primary-600 text-2xl mx-0 my-12">
-                <span>Mes autres</span>
-                <span>Recettes</span>
-            </h2>
-        </div>
-        <div class="grid grid-cols-6 gap-3">
-            @foreach($postsRelated as $post)
-                <div class="card-related__post col-span-6 md:col-span-2">
-                    @include('includes.card')
-                </div>
-            @endforeach
-        </div>
-    </section>
 @endsection
 
 {{--<script>--}}

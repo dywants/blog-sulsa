@@ -3,7 +3,7 @@
 @section('main')
     <div class="container relative mt-10">
         @forelse($abouts as $about)
-            <div class="content">
+            <div class="content mx-auto">
                 <div class="model">
                     <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -1,5 +1,10 @@
 @extends('layouts.post-layout')
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v11.0&appId=315852386913072&autoLogAppEvents=1"
+        nonce="v0nksIu2"></script>
+
 @section('content')
     <section class="post container pb-4 bg-white">
         <div class="mb-4 md:mb-0 w-full mx-auto relative shadow-md">
@@ -38,6 +43,15 @@
 
             <div class="px-4 text-lg leading-relaxed w-full my-4">
                 {!! $post->body !!}
+            </div>
+
+            <div class="fab-share my-10 ml-2 flex items-center">
+                <div class="fb-like" data-href="{{ Request::url() }}" data-width="" data-layout="button_count"
+                     data-action="like" data-size="large" data-share="false"></div>
+                <div class="fb-share-button" data-href="{{ Request::url() }}" data-layout="button_count"
+                     data-size="large"><a target="_blank"
+                                          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog-sulsa.test%2F&amp;src=sdkpreparse"
+                                          class="fb-xfbml-parse-ignore">Partager</a></div>
             </div>
 
             <div class="w-full mx-auto">
@@ -90,7 +104,7 @@
 @endsection
 
 @section('aside')
-    <div class="card border w-96 hover:shadow-none relative flex flex-col mx-auto shadow-lg mx-5 mb-5">
+    <div class="card border w-96 hover:shadow-none relative flex flex-col mx-auto shadow-sm mx-5 mb-5">
         <img class="max-h-20 w-full opacity-80 absolute top-0" style="z-index:-1" src="{{ asset('img/background.jpg') }}" alt="" />
         <div class="profile w-full flex m-3 ml-4 text-white">
             <img class="w-28 h-28 p-1 bg-white rounded-full" src="{{ asset('/storage/' . $about->image) }}" alt=""/>
@@ -104,9 +118,28 @@
             <a href="{{ route('about') }}" class="add border rounded-r-2xl rounded-l-sm border-gray-300 p-1 px-4 cursor-pointer hover:bg-gray-700 hover:text-white">Bio</a>
         </div>
     </div>
+
+    <div class="facebook-card card border w-96 hover:shadow-none relative flex flex-col mx-auto shadow-sm mx-5 mb-5 px-6">
+       <div class="widget__title py-4">
+           <h3 class="title text-lg leading-9 h-10 p-0 m-0 text-dark-600 border-b">Facebook Page</h3>
+       </div>
+
+        <div class="widget_content my-8">
+            <div class="fb-page" data-href="https://www.facebook.com/lacuisinedesulson/" data-tabs="timeline"
+                 data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                 data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/lacuisinedesulson/" class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/lacuisinedesulson/">La Cuisine de Sulson</a></blockquote>
+            </div>
+        </div>
+
+    </div>
 @endsection
 
 @section('other-section')
+    <div class="my-8">
+        <div class="fb-comments" data-href="{{ Request::url() }}" data-width="736" data-numposts="5"></div>
+    </div>
    <div class="mt-8">
        <div id="disqus_thread"></div>
    </div>
@@ -125,24 +158,23 @@
             @endforeach
         </div>
     </section>
-
 @endsection
 
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-/*
-    var disqus_config = function () {
-    this.page.url = {{ Request::url() }};  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = {{ $post->slug }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-*/
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://lacuisinedesulson.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{{--<script>--}}
+{{--    /**--}}
+{{--     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.--}}
+{{--     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */--}}
+
+{{--    var disqus_config = function () {--}}
+{{--    this.page.url = {{ Request::url() }};  // Replace PAGE_URL with your page's canonical URL variable--}}
+{{--    this.page.identifier = {{ $post->slug }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable--}}
+{{--    };--}}
+
+{{--    (function() { // DON'T EDIT BELOW THIS LINE--}}
+{{--        var d = document, s = d.createElement('script');--}}
+{{--        s.src = 'https://lacuisinedesulson.disqus.com/embed.js';--}}
+{{--        s.setAttribute('data-timestamp', +new Date());--}}
+{{--        (d.head || d.body).appendChild(s);--}}
+{{--    })();--}}
+{{--</script>--}}
+{{--<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>--}}

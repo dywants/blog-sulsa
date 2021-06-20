@@ -14,6 +14,10 @@
     @yield('extra-css')
 </head>
 <body class="flex flex-col h-screen">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v11.0&appId=402371770879381&autoLogAppEvents=1"
+        nonce="28d3GRUs"></script>
 
 <!-- Header -->
 <header id="header" class="shadow">

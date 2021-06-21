@@ -19,22 +19,22 @@ class EmailController extends Controller
             'email' => 'required|email',
             'subject' => 'required',
             'name' => 'required',
-            'content' => 'required',
+            'messageForm' => 'required',
         ]);
 
         $data = [
             'subject' => $request->subject,
             'name' => $request->name,
             'email' => $request->email,
-            'content' => $request->content
+            'messageForm' => $request->messageForm,
         ];
 
-        Mail::send('front.email-template', $data, function($message) use ($data) {
+        Mail::send('emails.contact-mail', $data, function($message) use ($data) {
             $message->from($data['email'])
-                ->to('lacuisinedesulson@gmail.com')
+                ->to(config('lacuisinedesulson.admin_support_email'))
                 ->subject($data['subject']);
         });
 
-        return back()->with(['message' => 'Email successfully sent!']);
+        return back()->with(['message' => 'Merci pour votre message, nous vous répondrons dans les plus brefs délais']);
     }
 }

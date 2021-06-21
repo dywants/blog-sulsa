@@ -45,9 +45,9 @@
 
 
                 <div class="wrap-input100 validate-input" data-validate="Message is required">
-                    <textarea class="input100" name="content" placeholder="Message"></textarea>
+                    <textarea class="input100" name="messageForm" placeholder="Message"></textarea>
                     <span class="focus-input100"></span>
-                    @error('content')
+                    @error('messageForm')
                     <span class="text-danger"> {{ $message }} </span>
                     @enderror
                 </div>
